@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, -webkit-body;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0; padding: 0;
+}
+
+.video-container {
+    background: #edeae8;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+  color: #c0a81e;
+}
+
+.nav-item {
+  color: #1b3146;
+}
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3359375rem;
+  padding-bottom: 0.3359375rem;
+  margin-right: 3rem;
+  font-size: 2.09375rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.nav-tabs {
+  border-bottom: 1px solid #ddda13;
+  background-color: chocolate;
+}
+
+/* This CSS styles the ev icon in the navbar */
+.nav-ev {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  
+}
+
+/* hero text */
+/* The styles for the parallax */
+.hero {
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;
+  background: black;
+  background-image: url("images/tesla.png");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  font-size: 30%
+}
+
+.hero h1 {
+  position: absolute;
+  margin-top: 250px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+  color: rgb(255, 248, 234);
+
+}
+
+.hero p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+/* MAp container styling*/
+#map-example-container {height: 300px};
+/* Adding styles to the aside and filter form */
+.ev-form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.5rem + 0px);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color:#0b55a0 ;
+  background-color: #f9f7f7;
+  background-clip: padding-box;
+  border: 0px solid #ced4da;
+  border-radius: 0;
+}
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #8e979f;
+  outline: none;
+}
+
+table#EV-Table thead .sorting:after,
+table#EV-Table thead .sorting:before,
+table#EV-Table thead .sorting_asc:after,
+table#EV-Table thead .sorting_asc:before,
+table#EV-Table thead .sorting_asc_disabled:after,
+table#EV-Table thead .sorting_asc_disabled:before,
+table#EV-Table thead .sorting_desc:after,
+table#EV-Table thead .sorting_desc:before,
+table#EV-Table thead .sorting_desc_disabled:after,
+table#EV-Table thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+ 
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #8e979f;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e979f;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8e979f;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e979f;
+}
+
+/* media queries which will only be activated at specific screen sizes */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: none;
+  }
+
+  #table-area tr td:first-child {
+    font-size: 1.8em;
+    font-weight: bold;
+    background: #1b3146;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+  }
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    background: aliceblue;
+    font-size: 3rem;
+  }
+
+  #table-area td {
+    font-size: 2em;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  #table-area tbody td::before {
+    display: block;
+    font-size: 3.3rem;
+    font-weight: bold;
+    text-align: center;
+    content: attr(data-th);
+  }
+
+  .hero h1 {
+    animation: smaller-title 1.2s forwards linear;
+  }
+}
+
+/* keyframe animations which will be used to animate the title */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 7.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 5.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

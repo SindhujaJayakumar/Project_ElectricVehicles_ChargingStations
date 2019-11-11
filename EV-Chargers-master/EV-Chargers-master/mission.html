@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Our Mission</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">SUPERCHARGE ME!
+              
+            </a>
+          </div>
+        </div>
+      </nav>
+
+<body>
+     <!-- start of nav bar -->
+
+     <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="./index.html"><font size = "2" color = "black">Home</font></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="./mission.html"><font size = "2" color = "black">Our Mission</font></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="./time.html"><font size = "2" color = "black">Data</font></a>
+      </li>
+    </ul>
+
+     <!-- end of nav bar -->
+
+    <div class="hero text-center">
+      <h1>Our Mission</h1>
+    </div>
+
+    <div class="col-md-12 jumbotron text-center">
+      <br>
+      <font size="6" ><br> Gas stations outnumber public charging stations by around seven to one. <br>
+          This causes many to question the practicality of driving an electric car.<br>
+          Studies show that consumers are more likely to buy an electric car when they <br>
+          see nearby stations in town. The insufficient amount of charging stations <br>
+          is a real concern that is deterring some consumers from going all-electric.<br>
+          Access to efficient charging is now a roadblock to electric-vehicle uptake.<br>
+          The problem being the charging infrastructure lacks a viable business model <br>
+          and the plan to radically expand the number of available charging stations<br>
+          depends on exponential growth in the sale of EVs. We have gathered data<br>
+          to show that despite many roadblocks EV sales have increased dramatically and will <br>
+          continue to do so in the coming years. Going electric is not just an eco-friendly goal.<br>
+          It's a business reality, and a major transition in the industry. It is the Future.<br>
+        </font>
+  ​
+      <br>
+      </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <h1>EV Charging Stations</h1>
+          <p>Use the interactive chart below to explore the dataset</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="well">
+            <h5>ENTER YOUR ZIP CODE:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Stations Near You</h3>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-xs-12  col-md-9">
+              <div id="scatter">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+    <footer class="footer">
+    <span class="bottom">Our Mission</span>
+    </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://d3js.org/d3.v4.min.js'></script>
+  <script src="static/js/data.js"></script> 
+  <script src="static/js/app.js"></script> 
+
+</body>
+
+</html>
